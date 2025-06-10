@@ -14,10 +14,10 @@ resource "vercel_project" "this" {
     type = "github"
     repo = var.git_repository
   }
-   root_directory = "api"
+   root_directory = "app"
 }
 
-resource "vercel_deployment" "this" {
-  project_id  = vercel_project.this.id
-  ref=var.git_branch
-}
+# resource "vercel_deployment" "this" {
+#   project_id  = vercel_project.this.id
+#   ref=var.git_branch
+# }
